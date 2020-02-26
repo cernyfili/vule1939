@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>Vůle 1939</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 100vh;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+
+				<link rel="stylesheet" href="../style/nav.css">
+				<link rel="stylesheet" href="../style/mapa.css">
+
+				<script src="../js/fce.nav.js"></script>
+  </head>
+  <body>
+			<header>
+				<div class="welcomepage-nav">
+					<div class="nav" id="nav">
+							<a href="../index.html" class="active">Domov</a>
+							<a href="zivotopis.html">Životopis</a>
+							<a href="mapa.html">Cesta historie</a>
+							<a href="javascript:void(0);" class="icon" onclick="resizer_navbar()"><i class="fa fa-bars"></i></a>
+					</div>
+				</div>
+			</header>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var pilsen = {lat: 49.746841, lng: 13.376990};
+  var prague = {lat: 50.075539, lng: 14.437800};
+  var ostrava = {lat: 49.820923, lng: 18.262524};
+  var krakov = {lat: 50.037659, lng: 13.647490};
+  var varsava = {lat: 19.287880, lng: 72.896523};
+  var vilnius = {lat: 54.6870458, lng: 25.2829111};
+  var riga = {lat: 56.9493977, lng: 24.1051846};
+  var valga = {lat: 57.777034, lng: 26.0315628};
+  var moisakula = {lat: 58.2964791, lng: 22.0265973};
+  var parnu = {lat: 58.3835136, lng: 24.5081751};
+  var kuressaare = {lat: 58.2431994, lng: 22.50050152};
+  var karuste = {lat: 57.941314, lng: 22.01960452};
+  var talin = {lat: 59.4372155, lng: 24.7453688};
+  var stockholm = {lat: 59.3251172, lng: 18.0710935};
+  var gotland = {lat: 57.4174802, lng: 18.53695793};
+
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: vilnius});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: pilsen, map: map});
+  var marker = new google.maps.Marker({position: prague, map: map});
+  var marker = new google.maps.Marker({position: ostrava, map: map});
+  var marker = new google.maps.Marker({position: krakov, map: map});
+  var marker = new google.maps.Marker({position: varsava, map: map});
+  var marker = new google.maps.Marker({position: vilnius, map: map});
+  var marker = new google.maps.Marker({position: riga, map: map});
+  var marker = new google.maps.Marker({position: valga, map: map});
+  var marker = new google.maps.Marker({position: moisakula, map: map});
+  var marker = new google.maps.Marker({position: parnu, map: map});
+  var marker = new google.maps.Marker({position: kuressaare, map: map});
+  var marker = new google.maps.Marker({position: karuste, map: map});
+  var marker = new google.maps.Marker({position: talin, map: map});
+  var marker = new google.maps.Marker({position: stockholm, map: map});
+  var marker = new google.maps.Marker({position: gotland, map: map});
+
+
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+      'sandstone rock formation in the southern part of the '+
+      'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+      'south west of the nearest large town, Alice Springs; 450&#160;km '+
+      '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+      'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+      'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+      'Aboriginal people of the area. It has many springs, waterholes, '+
+      'rock caves and ancient paintings. Uluru is listed as a World '+
+      'Heritage Site.</p>'+
+      '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+      'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+      '(last visited June 22, 2009).</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker = new google.maps.Marker({
+    position: pilsen,
+    map: map,
+    title: 'Uluru (Ayers Rock)'
+  });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+
+  var marker1 = new google.maps.Marker({
+    position: prague,
+    map: map,
+    title: 'Uluru (Ayers Rock)'
+  });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+
+  var marker2 = new google.maps.Marker({
+    position: ostrava,
+    map: map,
+    title: 'Uluru (Ayers Rock)'
+  });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+
+  var marker3 = new google.maps.Marker({
+    position: krakov,
+    map: map,
+    title: 'Uluru (Ayers Rock)'
+  });
+  var marker4 = new google.maps.Marker({
+    position: varsava,
+    map: map,
+    title: 'Uluru (Ayers Rock)'
+  });
+  var marker5 = new google.maps.Marker({
+    position: vilnius,
+    map: map,
+    title: 'Uluru (Ayers Rock)'
+  });
+  var marker6 = new google.maps.Marker({
+    position: riga,
+    map: map,
+    title: 'Uluru (Ayers Rock)'
+  });
+  var marker7 = new google.maps.Marker({
+    position: valga,
+    map: map,
+    title: 'Uluru (Ayers Rock)'
+  });
+  var marker8 = new google.maps.Marker({
+    position: moisakula,
+    map: map,
+    title: 'Uluru (Ayers Rock)'
+  });
+  var marker9 = new google.maps.Marker({
+    position: parnu,
+    map: map,
+    title: 'Uluru (Ayers Rock)'
+  });
+  var marker0 = new google.maps.Marker({
+    position: kuressaare,
+    map: map,
+    title: 'Uluru (Ayers Rock)'
+  });
+  var marker10 = new google.maps.Marker({
+    position: karuste,
+    map: map,
+    title: 'Uluru (Ayers Rock)'
+  });
+  var marker11 = new google.maps.Marker({
+    position: talin,
+    map: map,
+    title: 'Uluru (Ayers Rock)'
+  });
+  var marker12 = new google.maps.Marker({
+    position: stockholm,
+    map: map,
+    title: 'Uluru (Ayers Rock)'
+  });
+  var marker13 = new google.maps.Marker({
+    position: gotland,
+    map: map,
+    title: 'Uluru (Ayers Rock)'
+  });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+  marker1.addListener('click', function() {
+    infowindow.open(map, marker1);
+  });
+  marker2.addListener('click', function() {
+    infowindow.open(map, marker2);
+  });
+  marker3.addListener('click', function() {
+    infowindow.open(map, marker3);
+  });
+  marker4.addListener('click', function() {
+    infowindow.open(map, marker4);
+  });
+  marker5.addListener('click', function() {
+    infowindow.open(map, marker5);
+  });
+  marker6.addListener('click', function() {
+    infowindow.open(map, marker6);
+  });
+  marker7.addListener('click', function() {
+    infowindow.open(map, marker7);
+  });
+  marker8.addListener('click', function() {
+    infowindow.open(map, marker8);
+  });
+  marker9.addListener('click', function() {
+    infowindow.open(map, marker9);
+  });
+  marker0.addListener('click', function() {
+    infowindow.open(map, marker0);
+  });
+  marker10.addListener('click', function() {
+    infowindow.open(map, marker10);
+  });
+  marker11.addListener('click', function() {
+    infowindow.open(map, marker11);
+  });
+  marker12.addListener('click', function() {
+    infowindow.open(map, marker12);
+  });
+  marker13.addListener('click', function() {
+    infowindow.open(map, marker13);
+  });
+
+}
+
+
+
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAF97zakm8jUdWXcTHao-OnQtz-zWxIRs0&callback=initMap">
+    </script>
+    <section>
+    <footer class="row">
+      <div class="footer-social">
+       <a href="#"><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_facebook-128.png"></a>
+       <a href="#"><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/twitter_online_social_media-128.png"></a>
+       <a href="#"><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/instagram_online_social_media_photo-128.png"></a>
+       <a href="#"><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_google_plus-128.png"></a>
+      </div>
+      <div class="copyright col-xs-12 col-sm-3 col-sm-pull-6">
+        <p> &copy; Me from now to eternity </p>
+      </div>
+      <div class="impressum col-xs-12 col-sm-3 col-sm-pull-6">
+        <p> An impressive impressum </p>
+        <p> Adresse und so </p>
+      </div>
+    </footer>
+    </section>
+  </body>
+</html>

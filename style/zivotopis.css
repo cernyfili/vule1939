@@ -1,0 +1,46 @@
+body{
+	margin: 0;
+	font-family: 'Poppins' ;
+}
+
+.text{
+	text-align: center;
+}
+
+.card{
+	margin: 10px 25vh;
+	display: flex;
+}
+
+.card-info{
+	margin: 0 auto;
+	max-width: 400px;
+}
+
+.card-info h2{
+	text-align: center;
+}
+
+.card-info p{
+	text-align: justify;
+}
+
+.card-picture img {
+	    height: 300px;
+}
+
+
+.row{
+	text-align: center;
+	margin: 10px auto;
+}
+.footer-social{
+	display: flex;
+	justify-content: center;
+}
+
+.footer-social img{
+	padding: 0 3px;
+	height: 3rem;
+	width: 3rem;
+}
